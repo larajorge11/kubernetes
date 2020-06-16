@@ -8,6 +8,11 @@ metadata:
 spec:
   containers:
     - name: postgres-app
-      image: postgres:9.4
+      image: postgres:9.5
+      env:
+        - name: POSTGRES_USER
+          value: admin
+        - name: POSTGRES_PASSWORD
+          value: admin
       ports:
         - containerPort: 5432
